@@ -11,16 +11,19 @@ const GlobalStyles = createGlobalStyle`
 
     body{
         background: #1b1b1b;
+        font-family: 'Inter', sans-serif;
 
     }
 
     button{
         font-weight: bold;
         font-size: 1.1rem;
+        font-family: 'Inter', sans-serif;
         cursor: pointer;
         padding: 1rem 2rem;
         border: 3px solid #23d997;
         background: transparent;
+        outline:none;
         color: white;
         transition: all 0.5s ease;
         &:hover {
