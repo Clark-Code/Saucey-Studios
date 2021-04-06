@@ -4,15 +4,13 @@ import ServiceSection from '../components/ServicesSection';
 import FaqSection from '../components/FaqSection';
 
 const Home = () => {
-    return (
-        <Fragment>
-
-            <HomeSection />
-            <ServiceSection />
-            <FaqSection />
-
-        </Fragment>       
-    )
-}
+	return (
+		<Fragment>
+			<HomeSection />
+			<ServiceSection />
+			<FaqSection />
+		</Fragment>
+	);
+};
 
 export default Home;
