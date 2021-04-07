@@ -43,6 +43,7 @@ const Work = styled.div`
 	padding: 5rem 10rem;
 	h2 {
 		padding: 1rem 0rem;
+		color: white;
 	}
 `;
 
@@ -50,7 +51,7 @@ const Movie = styled.div`
 	padding-bottom: 10rem;
 	.line {
 		height: 0.5rem;
-		background: #cccccc;
+		background: #23d997;
 		margin-bottom: 3rem;
 	}
 	img {

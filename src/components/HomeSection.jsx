@@ -5,40 +5,50 @@ import home1 from '../img/home1.png';
 import { About, Description, Image, Hide } from '../styles';
 //router
 import { Link } from 'react-router-dom';
+//framer-motion
+import { motion } from 'framer-motion';
+import { titleAnimation, container, fade, button, image } from '../Animation';
 
 const HomeSection = () => {
 	return (
 		<Fragment>
 			<About>
 				<Description>
-					<div className="title">
+					<motion.div
+						variants={container}
+						initial="hidden"
+						animate="show"
+						className="title"
+					>
 						<Hide>
-							<h2>We work to make</h2>
+							<motion.h2 variants={titleAnimation}>We work to make</motion.h2>
 						</Hide>
-					</div>
-					<div className="title">
 						<Hide>
-							<h2>
+							<motion.h2 variants={titleAnimation}>
 								your <span>dreams</span>
-							</h2>
+							</motion.h2>
 						</Hide>
-					</div>
-					<div className="title">
 						<Hide>
-							<h2>come true.</h2>
+							<motion.h2 variants={titleAnimation}>come true.</motion.h2>
 						</Hide>
-					</div>
-					<p>
-						Contact us about any Photography or Cinematography ideas that you
-						have
-					</p>
-					<Link to="/contact">
-						<button>Contact Us</button>
-					</Link>
-				</Description>
 
+						<motion.p variants={fade}>
+							Contact us about any Photography or Cinematography ideas that you
+							have
+						</motion.p>
+						<Link to="/contact">
+							<motion.button variants={button}>Contact Us</motion.button>
+						</Link>
+					</motion.div>
+				</Description>
 				<Image>
-					<img src={home1} alt="guy with camera" />
+					<motion.img
+						variants={image}
+						initial="hidden"
+						animate="show"
+						src={home1}
+						alt="guy with camera"
+					/>
 				</Image>
 			</About>
 		</Fragment>

@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { MovieState } from '../MovieState';
 import Award from '../components/Award';
+//framer-motion
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../Animation';
 
 const MovieDetail = () => {
 	const history = useHistory();
@@ -18,26 +21,28 @@ const MovieDetail = () => {
 
 	return (
 		<Fragment>
-			{movie && (
-				<Details>
-					<HeadLine>
-						<h2>{movie.title}</h2>
-						<img src={movie.mainImg} alt="movie" />
-					</HeadLine>
-					<Awards>
-						{movie.awards.map((award) => (
-							<Award
-								title={award.title}
-								description={award.description}
-								key={award.title}
-							/>
-						))}
-					</Awards>
-					<ImageDisplay>
-						<img src={movie.secondaryImg} alt="movie" />
-					</ImageDisplay>
-				</Details>
-			)}
+			<motion.div variants={pageAnimation} initial="hidden" animate="show">
+				{movie && (
+					<Details>
+						<HeadLine>
+							<h2>{movie.title}</h2>
+							<img src={movie.mainImg} alt="movie" />
+						</HeadLine>
+						<Awards>
+							{movie.awards.map((award) => (
+								<Award
+									title={award.title}
+									description={award.description}
+									key={award.title}
+								/>
+							))}
+						</Awards>
+						<ImageDisplay>
+							<img src={movie.secondaryImg} alt="movie" />
+						</ImageDisplay>
+					</Details>
+				)}
+			</motion.div>
 		</Fragment>
 	);
 };
