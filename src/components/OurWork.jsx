@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+//router
 import { Link } from 'react-router-dom';
 //images
 import athlete from '../img/athlete1.png';
@@ -12,21 +13,21 @@ const OurWork = () => {
 			<Movie>
 				<h2>Fight Night</h2>
 				<div className="line"></div>
-				<Link>
+				<Link to="/work/fight-night">
 					<img src={athlete} alt="athlete" />
 				</Link>
 			</Movie>
 			<Movie>
 				<h2>The Race</h2>
 				<div className="line"></div>
-				<Link>
+				<Link to="/work/the-race">
 					<img src={driver} alt="driver" />
 				</Link>
 			</Movie>
 			<Movie>
 				<h2>Summer Days</h2>
 				<div className="line"></div>
-				<Link>
+				<Link to="/work/summer-days">
 					<img src={couple} alt="couple" />
 				</Link>
 			</Movie>

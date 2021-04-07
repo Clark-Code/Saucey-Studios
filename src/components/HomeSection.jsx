@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
+//images
 import home1 from '../img/home1.png';
+//styled-components
 import { About, Description, Image, Hide } from '../styles';
+//router
 import { Link } from 'react-router-dom';
 
 const HomeSection = () => {

@@ -4,6 +4,8 @@ import GlobalStyles from './components/GlobalStyles';
 import Nav from './components/Nav';
 import Contact from './pages/Contact';
 import OurWork from './pages/OurWork';
+import MovieDetail from './pages/MovieDetail';
+//router
 import { Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -17,6 +19,9 @@ function App() {
 				</Route>
 				<Route path="/Work" exact>
 					<OurWork />
+				</Route>
+				<Route path="/work/:id" exact>
+					<MovieDetail />
 				</Route>
 				<Route path="/Contact" exact>
 					<Contact />
