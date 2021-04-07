@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import home1 from '../img/home1.png';
 import { About, Description, Image, Hide } from '../styles';
+import { Link } from 'react-router-dom';
 
 const HomeSection = () => {
 	return (
@@ -28,7 +29,9 @@ const HomeSection = () => {
 						Contact us about any Photography or Cinematography ideas that you
 						have
 					</p>
-					<button>Contact Us</button>
+					<Link to="/contact">
+						<button>Contact Us</button>
+					</Link>
 				</Description>
 
 				<Image>

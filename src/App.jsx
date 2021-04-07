@@ -2,13 +2,26 @@ import React from 'react';
 import HomeSection from './pages/HomeSection';
 import GlobalStyles from './components/GlobalStyles';
 import Nav from './components/Nav';
+import Contact from './pages/Contact';
+import OurWork from './pages/OurWork';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
 	return (
 		<div className="App">
 			<GlobalStyles />
 			<Nav />
-			<HomeSection />
+			<Switch>
+				<Route path="/" exact>
+					<HomeSection />
+				</Route>
+				<Route path="/Work" exact>
+					<OurWork />
+				</Route>
+				<Route path="/Contact" exact>
+					<Contact />
+				</Route>
+			</Switch>
 		</div>
 	);
 }
