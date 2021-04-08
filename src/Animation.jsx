@@ -75,7 +75,20 @@ export const image = {
 		opacity: 1,
 		transition: {
 			ease: 'easeOut',
-			duration: 1.25,
+			duration: 1.2,
+		},
+	},
+};
+
+export const line = {
+	hidden: {
+		width: '0%',
+	},
+	show: {
+		width: '100%',
+		transition: {
+			duration: 1.5,
+			ease: 'easeOut',
 		},
 	},
 };

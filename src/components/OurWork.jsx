@@ -6,13 +6,16 @@ import { Link } from 'react-router-dom';
 import athlete from '../img/athlete1.png';
 import driver from '../img/driver1.png';
 import couple from '../img/couple1.png';
+//framer-motion
+import { line } from '../Animation';
+import { motion } from 'framer-motion';
 
 const OurWork = () => {
 	return (
 		<Work>
 			<Movie>
 				<h2>Fight Night</h2>
-				<div className="line"></div>
+				<motion.div variants={line} className="line"></motion.div>
 				<Link to="/work/fight-night">
 					<img src={athlete} alt="athlete" />
 				</Link>

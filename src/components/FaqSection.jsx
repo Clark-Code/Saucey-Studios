@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import Toggle from './Toggle';
 //styled-components
 import { About } from '../styles';
+//framer-motion
+import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 
 const FaqSection = () => {
 	return (
@@ -9,50 +12,44 @@ const FaqSection = () => {
 			<h2>
 				Frequently asked <span>questions</span>
 			</h2>
-			<div className="question">
-				<h4>How do I start?</h4>
-				<div className="answer">
-					<p>Lorem ipsum dolor sit amet consectetur.</p>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-						Voluptatibus rerum suscipit fuga quia ab cumque.
-					</p>
-				</div>
-				<div className="faq-line"></div>
-			</div>
-			<div className="question">
-				<h4>Hours of operation</h4>
-				<div className="answer">
-					<p>Lorem ipsum dolor sit amet consectetur.</p>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-						Voluptatibus rerum suscipit fuga quia ab cumque.
-					</p>
-				</div>
-				<div className="faq-line"></div>
-			</div>
-			<div className="question">
-				<h4>Payment methods</h4>
-				<div className="answer">
-					<p>Lorem ipsum dolor sit amet consectetur.</p>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-						Voluptatibus rerum suscipit fuga quia ab cumque.
-					</p>
-				</div>
-				<div className="faq-line"></div>
-			</div>
-			<div className="question">
-				<h4>What products do you offer?</h4>
-				<div className="answer">
-					<p>Lorem ipsum dolor sit amet consectetur.</p>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-						Voluptatibus rerum suscipit fuga quia ab cumque.
-					</p>
-				</div>
-				<div className="faq-line"></div>
-			</div>
+			<AnimateSharedLayout>
+				<Toggle title="How Do I Start?">
+					<div className="answer">
+						<p>Lorem ipsum dolor sit amet consectetur.</p>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Voluptatibus rerum suscipit fuga quia ab cumque.
+						</p>
+					</div>
+				</Toggle>
+				<Toggle title="Hours Of Operation">
+					<div className="answer">
+						<p>Lorem ipsum dolor sit amet consectetur.</p>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Voluptatibus rerum suscipit fuga quia ab cumque.
+						</p>
+					</div>
+				</Toggle>
+				<Toggle title="Payment Methods">
+					<div className="answer">
+						<p>Lorem ipsum dolor sit amet consectetur.</p>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Voluptatibus rerum suscipit fuga quia ab cumque.
+						</p>
+					</div>
+				</Toggle>
+				<Toggle title="What Products Do You Offer?">
+					<div className="answer">
+						<p>Lorem ipsum dolor sit amet consectetur.</p>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Voluptatibus rerum suscipit fuga quia ab cumque.
+						</p>
+					</div>
+				</Toggle>
+			</AnimateSharedLayout>
 		</Faq>
 	);
 };

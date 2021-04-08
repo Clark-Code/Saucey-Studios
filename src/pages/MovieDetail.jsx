@@ -61,7 +61,12 @@ const HeadLine = styled.div`
 		position: absolute;
 		top: 10%;
 		left: 50%;
+		padding-bottom: 10rem;
 		transform: translate(-50%, -10%);
+		font-family: 'Lobster', sans-serif;
+		@media (max-width: 1300px) {
+			padding-bottom: 30rem;
+		}
 	}
 	img {
 		width: 100%;
@@ -76,6 +81,9 @@ const Awards = styled.div`
 	margin: 5rem 10rem;
 	align-items: center;
 	justify-content: space-around;
+	@media (max-width: 1300px) {
+		flex-direction: column;
+	}
 `;
 
 const ImageDisplay = styled.div`
